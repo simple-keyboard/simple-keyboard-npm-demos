@@ -1,0 +1,22 @@
+{
+  "name": "simple-keyboard-demo-npm",
+  "version": "1.0.0",
+  "description": "Onscreen Virtual Keyboard for Kiosks, Mobile and Web",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "simple-keyboard": "2.5.9"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": [
+    "virtual",
+    "keyboard",
+    "onscreen",
+    "kiosk"
+  ]
+}
