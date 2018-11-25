@@ -9,7 +9,7 @@ let keyboard = new Keyboard({
 /**
  * Update simple-keyboard when input is changed directly
  */
-document.querySelector(".input").addEventListener("change", event => {
+document.querySelector(".input").addEventListener("input", event => {
   keyboard.setInput(event.target.value);
 });
 
