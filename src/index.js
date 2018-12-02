@@ -4,7 +4,12 @@ import "./index.css";
 
 let keyboard = new Keyboard({
   onChange: input => onChange(input),
-  onKeyPress: button => onKeyPress(button)
+  onKeyPress: button => onKeyPress(button),
+  layout: {
+    default: ["1 2 3", "4 5 6", "7 8 9", "{shift} 0 _", "{bksp}"],
+    shift: ["! / #", "$ % ^", "& * (", "{shift} ) +", "{bksp}"]
+  },
+  theme: "hg-theme-default hg-layout-numeric numeric-theme"
 });
 
 /**

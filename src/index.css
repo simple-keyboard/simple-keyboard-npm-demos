@@ -7,6 +7,19 @@ input {
   box-sizing: border-box;
 }
 
-.simple-keyboard {
-  max-width: 850px;
+/*
+  Theme: numeric
+*/
+.numeric-theme {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.numeric-theme + .simple-keyboard-preview {
+  max-width: 320px;
+}
+
+.simple-keyboard.hg-theme-default.numeric-theme
+  .hg-button.hg-standardBtn.hg-button-at {
+  max-width: none;
 }
