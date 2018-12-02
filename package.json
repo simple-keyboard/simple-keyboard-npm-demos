@@ -1,7 +1,7 @@
 {
-  "name": "simple-keyboard-demo-npm",
+  "name": "simple-keyboard-npm-demos",
   "version": "1.0.0",
-  "description": "Onscreen Virtual Keyboard for Kiosks, Mobile and Web",
+  "description": "Javascript Virtual Keyboard for Kiosks, Mobile and Web",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
