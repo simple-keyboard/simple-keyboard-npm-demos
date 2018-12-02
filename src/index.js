@@ -1,5 +1,6 @@
 import Keyboard from "simple-keyboard";
 import "simple-keyboard/build/css/index.css";
+import "./index.css";
 
 let keyboard = new Keyboard({
   onChange: input => onChange(input),
