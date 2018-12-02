@@ -136,5 +136,3 @@ function handleShift() {
     layoutName: shiftToggle
   });
 }
-
-document.addEventListener("keydown", event => {});
