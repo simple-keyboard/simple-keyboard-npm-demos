@@ -7,6 +7,24 @@ input {
   box-sizing: border-box;
 }
 
-.simple-keyboard {
-  max-width: 850px;
+/*
+  Theme: emoji
+*/
+.emoji-theme {
+  max-width: 635px;
+  margin: 0 auto;
+}
+
+.emoji-theme.hg-theme-default .hg-button.hg-standardBtn {
+  height: auto;
+  font-size: 30px;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.emoji-theme.hg-theme-default .hg-button.hg-functionBtn {
+  height: auto;
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
 }
