@@ -2,19 +2,22 @@ import Keyboard from "simple-keyboard";
 import "simple-keyboard/build/css/index.css";
 import "./index.css";
 
-let keyboard = new Keyboard({
+let options = {
   onChange: input => onChange(input),
-  onKeyPress: button => onKeyPress(button)
+  onKeyPress: button => onKeyPress(button),
+  theme: "simple-keyboard hg-theme-default hg-layout-default",
+
+  // To keep inputs syncronized
+  syncInstanceInputs: true
+};
+
+let keyboard1 = new Keyboard(".keyboard1", {
+  ...options
 });
 
-/**
- * Update simple-keyboard when input is changed directly
- */
-document.querySelector(".input").addEventListener("input", event => {
-  keyboard.setInput(event.target.value);
+let keyboard2 = new Keyboard(".keyboard2", {
+  ...options
 });
-
-console.log(keyboard);
 
 function onChange(input) {
   document.querySelector(".input").value = input;
@@ -31,10 +34,34 @@ function onKeyPress(button) {
 }
 
 function handleShift() {
-  let currentLayout = keyboard.options.layoutName;
-  let shiftToggle = currentLayout === "default" ? "shift" : "default";
+  keyboard1.dispatch(instance => {
+    let currentLayout = instance.options.layoutName;
+    let shiftToggle = currentLayout === "default" ? "shift" : "default";
 
-  keyboard.setOptions({
-    layoutName: shiftToggle
+    instance.setOptions({
+      layoutName: shiftToggle
+    });
   });
 }
+
+/**
+ * Button handler
+ */
+document.querySelector(".button").addEventListener("click", () => {
+  let randomLetter = String.fromCharCode(
+    65 + Math.floor(Math.random() * 26)
+  ).toLowerCase();
+
+  console.log(randomLetter);
+
+  keyboard1.dispatch(instance => {
+    instance.setOptions({
+      buttonTheme: [
+        {
+          class: "myKey",
+          buttons: randomLetter
+        }
+      ]
+    });
+  });
+});

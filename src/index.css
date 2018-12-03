@@ -10,3 +10,25 @@ input {
 .simple-keyboard {
   max-width: 850px;
 }
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h3 {
+  font: bold 20px Arial;
+}
+
+button {
+  width: 300px;
+  height: 50px;
+  font: 300 20px Arial;
+  padding:0 20px;
+  margin: 20px 0;
+}
+
+.container .hg-button.hg-standardBtn.myKey {
+  background: #6455d8;
+  color: white;
+}
