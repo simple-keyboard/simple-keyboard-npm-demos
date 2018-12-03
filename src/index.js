@@ -7,6 +7,8 @@ let keyboard = new Keyboard({
   onKeyPress: button => onKeyPress(button)
 });
 
+console.log(keyboard);
+
 /**
  * Update simple-keyboard when input is changed directly
  */
@@ -14,15 +16,14 @@ document.querySelector(".input").addEventListener("input", event => {
   keyboard.setInput(event.target.value);
 });
 
-console.log(keyboard);
-
 function onChange(input) {
   document.querySelector(".input").value = input;
   console.log("Input changed", input);
 }
 
 function onKeyPress(button) {
-  console.log("Button pressed", button);
+  let buttonElement = keyboard.getButtonElement(button);
+  console.log("Button element", buttonElement);
 
   /**
    * If you want to handle the shift and caps lock buttons
