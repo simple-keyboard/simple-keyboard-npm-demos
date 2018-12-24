@@ -8,5 +8,24 @@ input {
 }
 
 .simple-keyboard {
-  max-width: 850px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.simple-keyboard .hg-button.hg-functionBtn.hg-button-space {
+  min-width: 150px;
+  max-width: none;
+}
+
+.simple-keyboard.hg-theme-default .hg-button[data-skbtnuid^="numbers-"] {
+  width: 33%;
+  max-width: none;
+}
+
+.simple-keyboard .hg-button-numbers {
+  max-width: 80px;
+}
+
+.simple-keyboard .hg-button.hg-functionBtn.hg-button-ent {
+  max-width: 80px;
 }
