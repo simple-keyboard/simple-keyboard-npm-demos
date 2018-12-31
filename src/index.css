@@ -5,8 +5,17 @@ input {
   font-size: 20px;
   border: none;
   box-sizing: border-box;
+  color: black;
 }
 
 .simple-keyboard {
   max-width: 850px;
+  opacity: 0;
+  margin-top: -200%;
+  transition: margin-top 0s ease-in-out 0.3s, opacity 0.3s ease-in-out;
+}
+
+.show-keyboard {
+  opacity: 1;
+  margin-top: 0;
 }

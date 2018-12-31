@@ -7,6 +7,28 @@ let keyboard = new Keyboard({
   onKeyPress: button => onKeyPress(button)
 });
 
+let keyboardDOM = document.querySelector(".simple-keyboard");
+let keyboardContainerDOM = document.querySelector(".keyboard-input-container");
+
+/**
+ * Keyboard show
+ */
+document.querySelector(".input").addEventListener("focus", event => {
+  keyboardDOM.classList.add("show-keyboard");
+});
+
+/**
+ * Keyboard hide
+ */
+document.addEventListener("click", event => {
+  /**
+   * If keyboard is shown and element clicked is not a child of keyboard container, hide keyboard.
+   */
+  if(keyboardDOM.classList.contains("show-keyboard") && !keyboardContainerDOM.contains(event.target)){
+    keyboardDOM.classList.remove("show-keyboard");
+  }
+});
+
 /**
  * Update simple-keyboard when input is changed directly
  */
