@@ -19,3 +19,7 @@ input {
   opacity: 1;
   margin-top: 0;
 }
+
+.hg-button span {
+  pointer-events: none;
+}
