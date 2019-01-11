@@ -7,25 +7,28 @@ let keyboard = new Keyboard({
   onKeyPress: button => onKeyPress(button)
 });
 
-let keyboardDOM = document.querySelector(".simple-keyboard");
-let keyboardContainerDOM = document.querySelector(".keyboard-input-container");
+let inputDOM = document.querySelector(".input");
 
 /**
  * Keyboard show
  */
-document.querySelector(".input").addEventListener("focus", event => {
-  keyboardDOM.classList.add("show-keyboard");
+inputDOM.addEventListener("focus", event => {
+  keyboard.keyboardDOM.classList.add("show-keyboard");
 });
 
 /**
- * Keyboard hide
+ * Keyboard show toggle
  */
 document.addEventListener("click", event => {
-  /**
-   * If keyboard is shown and element clicked is not a child of keyboard container, hide keyboard.
-   */
-  if(keyboardDOM.classList.contains("show-keyboard") && !keyboardContainerDOM.contains(event.target)){
-    keyboardDOM.classList.remove("show-keyboard");
+  if (
+    // Target is not keyboard element
+    event.target !== keyboard.keyboardDOM &&
+    // Target is not the input
+    event.target !== inputDOM &&
+    // Target is not a keyboard button
+    !event.target.classList.contains("hg-button")
+  ) {
+    hideKeyboard();
   }
 });
 
@@ -59,4 +62,14 @@ function handleShift() {
   keyboard.setOptions({
     layoutName: shiftToggle
   });
+
+  showKeyboard();
+}
+
+function showKeyboard() {
+  keyboard.keyboardDOM.classList.add("show-keyboard");
+}
+
+function hideKeyboard() {
+  keyboard.keyboardDOM.classList.remove("show-keyboard");
 }
