@@ -2,9 +2,12 @@ import Keyboard from "simple-keyboard";
 import "simple-keyboard/build/css/index.css";
 import "./index.css";
 
+let myInputPattern = /^\d+$/;
 let keyboard = new Keyboard({
   onChange: input => onChange(input),
-  onKeyPress: button => onKeyPress(button)
+  onKeyPress: button => onKeyPress(button),
+  // Only numbers allowed
+  inputPattern: myInputPattern
 });
 
 /**
@@ -28,6 +31,15 @@ function onKeyPress(button) {
    * If you want to handle the shift and caps lock buttons
    */
   if (button === "{shift}" || button === "{lock}") handleShift();
+
+  // You can notify users when they've pressed the wrong button, if you want.
+  // Maybe not with an "alert()", but you get the idea :)
+  if (
+    !button.match(myInputPattern) &&
+    !button.includes("{") // Making sure it's not a {function} button
+  ) {
+    alert("Please only input numbers");
+  }
 }
 
 function handleShift() {
