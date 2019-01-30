@@ -1,3 +1,25 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.inputStatus {
+  padding: 15px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.inputStatus.correct {
+  background: #42ad5f;
+}
+
+.inputStatus.incorrect {
+  background: #e85151;
+}
+
+.inputStatus.empty {
+  background: black;
+}
+
 input {
   width: 100%;
   height: 100px;
