@@ -10,3 +10,34 @@ input {
 .simple-keyboard {
   max-width: 850px;
 }
+
+.hg-button-container {
+  background: green;
+  border-radius: 5px;
+}
+
+.simple-keyboard.hg-theme-default .hg-button {
+  height: 45px;
+}
+
+.simple-keyboard .hg-button-container .hg-button {
+  opacity: 0.5;
+}
+
+[data-skuid="default-r4c1"] {
+  background: blue;
+  flex-flow: column;
+}
+
+.simple-keyboard .hg-button-container[data-skuid="default-r4c1"] .hg-button {
+  height: 20px;
+  width: 100%;
+}
+
+.simple-keyboard .hg-button-container[data-skuid="default-r4c1"] .hg-button:first-child {
+  margin-bottom: 2px;
+}
+
+.simple-keyboard .myArrowBtns {
+  max-width: 35px;
+}
