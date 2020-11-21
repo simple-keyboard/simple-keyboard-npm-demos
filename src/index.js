@@ -28,6 +28,7 @@ document.addEventListener("click", (event) => {
      * Hide the keyboard when you're not clicking it or when clicking an input
      * If you have installed a "click outside" library, please use that instead.
      */
+    keyboard.options.theme.includes("show-keyboard") &&
     !event.target.className.includes("input") &&
     !event.target.className.includes("hg-button") &&
     !event.target.className.includes("hg-row") &&
