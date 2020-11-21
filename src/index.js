@@ -25,7 +25,7 @@ inputDOM.addEventListener("focus", (event) => {
 document.addEventListener("click", (event) => {
   if (
     /**
-     * Hide the keyboard when you're not clicking it or  when clicking an input
+     * Hide the keyboard when you're not clicking it or when clicking an input
      * If you have installed a "click outside" library, please use that instead.
      */
     !event.target.className.includes("input") &&
