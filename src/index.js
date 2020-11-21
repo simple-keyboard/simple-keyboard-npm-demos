@@ -6,8 +6,8 @@ const defaultTheme = "hg-theme-default";
 
 const keyboard = new Keyboard({
   theme: defaultTheme,
-  onChange: input => onChange(input),
-  onKeyPress: button => onKeyPress(button)
+  onChange: (input) => onChange(input),
+  onKeyPress: (button) => onKeyPress(button)
 });
 
 const inputDOM = document.querySelector(".input");
@@ -15,14 +15,14 @@ const inputDOM = document.querySelector(".input");
 /**
  * Keyboard show
  */
-inputDOM.addEventListener("focus", event => {
-  keyboard.keyboardDOM.classList.add("show-keyboard");
+inputDOM.addEventListener("focus", (event) => {
+  showKeyboard();
 });
 
 /**
  * Keyboard show toggle
  */
-document.addEventListener("click", event => {
+document.addEventListener("click", (event) => {
   if (
     /**
      * Hide the keyboard when you're not clicking it or  when clicking an input
@@ -40,7 +40,7 @@ document.addEventListener("click", event => {
 /**
  * Update simple-keyboard when input is changed directly
  */
-document.querySelector(".input").addEventListener("input", event => {
+document.querySelector(".input").addEventListener("input", (event) => {
   keyboard.setInput(event.target.value);
 });
 
@@ -67,8 +67,6 @@ function handleShift() {
   keyboard.setOptions({
     layoutName: shiftToggle
   });
-
-  showKeyboard();
 }
 
 function showKeyboard() {
