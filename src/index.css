@@ -10,16 +10,9 @@ input {
 
 .simple-keyboard {
   max-width: 850px;
-  opacity: 0;
-  margin-top: -200%;
-  transition: margin-top 0s ease-in-out 0.3s, opacity 0.3s ease-in-out;
+  display: none;
 }
 
 .show-keyboard {
-  opacity: 1;
-  margin-top: 0;
-}
-
-.hg-button span {
-  pointer-events: none;
+  display: block;
 }
