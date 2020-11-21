@@ -1,5 +1,5 @@
-<p><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/npm.png" width="60" align="center" /></p>
-<a href="https://simple-keyboard.com/demo" title="View Demo" target="_blank"><img src="https://franciscohodge.com/project-pages/simple-keyboard/images/simplekeyboard-banner3x.png" align="center" width="100%"></a>
+<p><img src="https://i.imgur.com/niEz5yi.png" width="60" align="center" /></p>
+<a href="https://simple-keyboard.com/demo" title="View Demo" target="_blank"><img src="https://i.imgur.com/s7iV02b.jpg" align="center" width="100%"></a>
 
   <p>
   <blockquote><strong>This is a repository for simple-keyboard's NPM demos</strong> <br /> https://virtual-keyboard.js.org</blockquote>
