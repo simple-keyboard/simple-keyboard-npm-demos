@@ -2,12 +2,15 @@ import Keyboard from "simple-keyboard";
 import "simple-keyboard/build/css/index.css";
 import "./index.css";
 
-let keyboard = new Keyboard({
+const defaultTheme = "hg-theme-default";
+
+const keyboard = new Keyboard({
+  theme: defaultTheme,
   onChange: input => onChange(input),
   onKeyPress: button => onKeyPress(button)
 });
 
-let inputDOM = document.querySelector(".input");
+const inputDOM = document.querySelector(".input");
 
 /**
  * Keyboard show
@@ -21,12 +24,14 @@ inputDOM.addEventListener("focus", event => {
  */
 document.addEventListener("click", event => {
   if (
-    // Target is not keyboard element
-    event.target !== keyboard.keyboardDOM &&
-    // Target is not the input
-    event.target !== inputDOM &&
-    // Target is not a keyboard button
-    !event.target.classList.contains("hg-button")
+    /**
+     * Hide the keyboard when you're not clicking it or  when clicking an input
+     * If you have installed a "click outside" library, please use that instead.
+     */
+    !event.target.className.includes("input") &&
+    !event.target.className.includes("hg-button") &&
+    !event.target.className.includes("hg-row") &&
+    !event.target.className.includes("simple-keyboard")
   ) {
     hideKeyboard();
   }
@@ -67,9 +72,13 @@ function handleShift() {
 }
 
 function showKeyboard() {
-  keyboard.keyboardDOM.classList.add("show-keyboard");
+  keyboard.setOptions({
+    theme: `${defaultTheme} show-keyboard`
+  });
 }
 
 function hideKeyboard() {
-  keyboard.keyboardDOM.classList.remove("show-keyboard");
+  keyboard.setOptions({
+    theme: defaultTheme
+  });
 }
