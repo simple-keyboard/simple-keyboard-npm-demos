@@ -8,8 +8,7 @@ let commonKeyboardOptions = {
   theme: "simple-keyboard hg-theme-default hg-layout-default",
   physicalKeyboardHighlight: true,
   syncInstanceInputs: true,
-  mergeDisplay: true,
-  debug: true
+  mergeDisplay: true
 };
 
 let keyboard = new Keyboard(".simple-keyboard-main", {
