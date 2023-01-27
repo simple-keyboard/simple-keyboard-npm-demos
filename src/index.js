@@ -1,4 +1,8 @@
 import Keyboard from "simple-keyboard";
+
+// Instead of the default import, you can also use this:
+// import { SimpleKeyboard as Keyboard } from "simple-keyboard";
+
 import "simple-keyboard/build/css/index.css";
 import "./index.css";
 
