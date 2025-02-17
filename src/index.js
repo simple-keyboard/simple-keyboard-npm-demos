@@ -8,7 +8,7 @@ import "./index.css";
 
 let isMobileWidth;
 
-let keyboard = new Keyboard({
+const keyboard = new Keyboard({
   onChange: input => onChange(input),
   onKeyPress: button => onKeyPress(button)
 });
@@ -35,8 +35,8 @@ function onKeyPress(button) {
 }
 
 function handleShift() {
-  let currentLayout = keyboard.options.layoutName;
-  let shiftToggle = currentLayout === "default" ? "shift" : "default";
+  const currentLayout = keyboard.options.layoutName;
+  const shiftToggle = currentLayout === "default" ? "shift" : "default";
 
   keyboard.setOptions({
     layoutName: shiftToggle
@@ -44,20 +44,11 @@ function handleShift() {
 }
 
 function handleNumbers() {
-  let currentLayout = keyboard.options.layoutName;
-  let numbersToggle = currentLayout !== "numbers" ? "numbers" : "default";
+  const currentLayout = keyboard.options.layoutName;
+  const numbersToggle = currentLayout !== "numbers" ? "numbers" : "default";
 
   keyboard.setOptions({
     layoutName: numbersToggle
-  });
-}
-
-function handleShift() {
-  let currentLayout = keyboard.options.layoutName;
-  let shiftToggle = currentLayout === "default" ? "shift" : "default";
-
-  keyboard.setOptions({
-    layoutName: shiftToggle
   });
 }
 
