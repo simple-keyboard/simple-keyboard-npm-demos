@@ -14,3 +14,8 @@ input {
 .hg-mobile-theme .hg-button.hg-functionBtn.hg-button-space {
   width: 70%;
 }
+
+.simple-keyboard.hg-theme-default.hg-layout-numbers .hg-button {
+  width: 33%;
+  max-width: none;
+}
