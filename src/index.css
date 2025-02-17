@@ -10,3 +10,7 @@ input {
 .simple-keyboard {
   max-width: 850px;
 }
+
+.hg-mobile-theme .hg-button.hg-functionBtn.hg-button-space {
+  width: 70%;
+}
